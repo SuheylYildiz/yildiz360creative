@@ -29,11 +29,12 @@ export default function SignUpLanding() {
         }} />
 
         <h2 style={{ color: '#000', marginBottom: '1.5rem' }}>
-          Create Your Workspace
+          Create your workspace
         </h2>
 
         <HoverButton text="Continue with Google" />
-        <HoverButton text="Create with Email" />
+        <HoverButton text="Continue with email" />
+        <HoverButton text="Create with email" />
 
         <p style={{ fontSize: '0.75rem', color: '#666', marginTop: '1.5rem' }}>
           By signing up, you agree to our{" "}
@@ -42,10 +43,7 @@ export default function SignUpLanding() {
         </p>
 
         <p style={{ fontSize: '0.85rem', marginTop: '1rem', color: '#444' }}>
-          Already have an account? <a href="/login" style={{ ...linkStyle, outline: 'none',
-boxShadow: 'none',
-WebkitTapHighlightColor: 'transparent'
-
+          Already have an account? <a href="/login" style={{ ...linkStyle, fontWeight: 'bold' }}>Log in</a>
         </p>
       </div>
     </div>
@@ -90,4 +88,4 @@ const linkStyle = {
   outline: 'none',
   boxShadow: 'none',
   WebkitTapHighlightColor: 'transparent'
-};
+}; 
