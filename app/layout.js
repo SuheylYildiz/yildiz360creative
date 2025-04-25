@@ -1,3 +1,5 @@
+'use client';
+
 export const metadata = {
   title: 'Yildiz360Creative',
   description: 'Empowering filmmakers with a sleek all-in-one creative workspace',
@@ -7,11 +9,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&display=swap" rel="stylesheet" />
         <style>{`
           body {
             margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #023535;
+            font-family: 'Comfortaa', sans-serif;
+            background-color: #0D0D0D;
             color: white;
           }
           header {
