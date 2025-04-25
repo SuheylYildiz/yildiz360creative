@@ -42,7 +42,10 @@ export default function SignUpLanding() {
         </p>
 
         <p style={{ fontSize: '0.85rem', marginTop: '1rem', color: '#444' }}>
-          Already have an account? <a href="/login" style={{ ...linkStyle, fontWeight: 'bold' }}>Log in</a>
+          Already have an account? <a href="/login" style={{ ...linkStyle, outline: 'none',
+boxShadow: 'none',
+WebkitTapHighlightColor: 'transparent'
+
         </p>
       </div>
     </div>
