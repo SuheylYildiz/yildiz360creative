@@ -3,13 +3,13 @@
 export default function SignUpLanding() {
   return (
     <div style={{
-      minHeight: '100vh',
+      height: '100vh',
       overflow: 'hidden',
       backgroundColor: '#FFFFFF',
+      fontFamily: "'Comfortaa', sans-serif",
       display: 'flex',
       justifyContent: 'center',
-      alignItems: 'center',
-      padding: '2rem'
+      alignItems: 'center'
     }}>
       <div style={{
         backgroundColor: '#ffffff',
@@ -18,8 +18,9 @@ export default function SignUpLanding() {
         maxWidth: '360px',
         width: '100%',
         textAlign: 'center',
-        boxShadow: '0 5px 25px rgba(0,0,0,0.1)'
+        boxShadow: '0 10px 25px rgba(0,0,0,0.1)'
       }}>
+        {/* الشعار */}
         <div style={{
           width: '40px',
           height: '40px',
@@ -28,19 +29,33 @@ export default function SignUpLanding() {
           margin: '0 auto 1.5rem'
         }} />
 
-        <h2 style={{ color: '#000', marginBottom: '1.5rem' }}>Create your workspace</h2>
+        <h2 style={{ color: '#000', marginBottom: '1.5rem', fontFamily: "'Comfortaa', sans-serif" }}>
+          Create your workspace
+        </h2>
 
+        {/* الأزرار الثلاثة */}
         <HoverButton text="Continue with Google" />
         <HoverButton text="Continue with email" />
         <HoverButton text="Create with email" />
 
-        <p style={{ fontSize: '0.75rem', color: '#666', marginTop: '1.5rem' }}>
+        {/* النص القانوني */}
+        <p style={{
+          fontSize: '0.75rem',
+          color: '#666',
+          marginTop: '1.5rem',
+          fontFamily: "'Comfortaa', sans-serif"
+        }}>
           By signing up, you agree to our{" "}
           <a href="#" style={linkStyle}>Terms of Service</a> and{" "}
           <a href="#" style={linkStyle}>Data Processing Agreement</a>.
         </p>
 
-        <p style={{ fontSize: '0.85rem', marginTop: '1rem', color: '#444' }}>
+        <p style={{
+          fontSize: '0.85rem',
+          marginTop: '1rem',
+          color: '#444',
+          fontFamily: "'Comfortaa', sans-serif"
+        }}>
           Already have an account? <a href="/login" style={{ ...linkStyle, fontWeight: 'bold' }}>Log in</a>
         </p>
       </div>
@@ -48,6 +63,7 @@ export default function SignUpLanding() {
   );
 }
 
+// زر مع تأثير Hover
 function HoverButton({ text }) {
   return (
     <button
@@ -66,6 +82,7 @@ function HoverButton({ text }) {
         border: '1px solid #ddd',
         borderRadius: '8px',
         fontSize: '0.9rem',
+        fontFamily: "'Comfortaa', sans-serif",
         fontWeight: '500',
         backgroundColor: '#fff',
         color: '#000',
@@ -79,8 +96,10 @@ function HoverButton({ text }) {
   );
 }
 
+// تنسيق الرابط بدون أي أثر تركيز
 const linkStyle = {
   color: '#0CABA8',
   textDecoration: 'none',
-  outline: 'none'
+  outline: 'none',
+  WebkitTapHighlightColor: 'transparent' // للأجهزة اللمسية
 };
