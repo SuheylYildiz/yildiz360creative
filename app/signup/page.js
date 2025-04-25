@@ -33,7 +33,6 @@ export default function SignUpLanding() {
         </h2>
 
         <HoverButton text="Continue with Google" />
-        <HoverButton text="Continue with Email" />
         <HoverButton text="Create with Email" />
 
         <p style={{ fontSize: '0.75rem', color: '#666', marginTop: '1.5rem' }}>
