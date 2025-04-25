@@ -19,14 +19,33 @@ export default function RootLayout({ children }) {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.5rem 2rem;
-            background-color: #015958;
+            padding: 1.25rem 2rem;
+            background-color: #0D0D0D;
+            border-bottom: 1px solid #222;
+          }
+          .logo {
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            font-size: 1.25rem;
+            color: white;
+          }
+          nav {
+            display: flex;
+            align-items: center;
           }
           nav a {
-            color: #0FC2C0;
+            color: #CFEAE8;
             margin-left: 1.5rem;
             text-decoration: none;
             font-weight: 500;
+          }
+          nav a.signup {
+            background-color: white;
+            color: #0D0D0D;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-weight: 600;
           }
           .hero {
             padding: 6rem 2rem;
@@ -60,14 +79,16 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <header>
-          <div style={{ fontWeight: 'bold', fontSize: '1.25rem' }}>Yildiz360Creative</div>
+          <div className="logo">Yildiz360Creative</div>
           <nav>
             <a href="#">Product</a>
             <a href="#">Resources</a>
             <a href="#">Pricing</a>
+            <a href="#">Customers</a>
+            <a href="#">Blog</a>
             <a href="#">Contact</a>
-            <a href="#">Login</a>
-            <a href="#" style={{ backgroundColor: '#0FC2C0', color: '#023535', padding: '0.5rem 1rem', borderRadius: '5px' }}>Sign Up</a>
+            <a href="#">Log in</a>
+            <a href="#" className="signup">Sign up</a>
           </nav>
         </header>
         <section className="hero">
