@@ -29,18 +29,11 @@ export default function SignUpLanding() {
         }} />
 
         <h2 style={{ color: '#000', marginBottom: '1.5rem' }}>
-          Create your workspace
+          Create Your Workspace
         </h2>
 
-        <HoverButton text="Continue with Google" />
-        <HoverButton text="Continue with email" />
-        <HoverButton text="Create with email" />
-
-        <p style={{ fontSize: '0.75rem', color: '#666', marginTop: '1.5rem' }}>
-          By signing up, you agree to our{" "}
-          <a href="#" style={linkStyle}>Terms of Service</a> and{" "}
-          <a href="#" style={linkStyle}>Data Processing Agreement</a>.
-        </p>
+        <HoverButton text="Continue With Google" />
+        <HoverButton text="Continue With Email" />
 
         <p style={{ fontSize: '0.85rem', marginTop: '1rem', color: '#444' }}>
           Already have an account? <a href="/login" style={{ ...linkStyle, fontWeight: 'bold' }}>Log in</a>
@@ -88,4 +81,4 @@ const linkStyle = {
   outline: 'none',
   boxShadow: 'none',
   WebkitTapHighlightColor: 'transparent'
-}; 
+};
