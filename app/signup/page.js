@@ -1,57 +1,74 @@
-export default function SignUpPage() {
+export default function SignUpLanding() {
   return (
     <div style={{
       minHeight: '100vh',
-      backgroundColor: '#0D0D0D',
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
+      backgroundColor: '#0D0D0D',
       padding: '2rem'
     }}>
-      <form style={{
-        backgroundColor: '#023535',
-        padding: '2rem',
+      <div style={{
+        backgroundColor: '#fff',
         borderRadius: '12px',
-        maxWidth: '400px',
+        padding: '2rem',
+        maxWidth: '360px',
         width: '100%',
-        color: '#fff',
-        display: 'flex',
-        flexDirection: 'column',
-        gap: '1rem',
-        boxShadow: '0 0 20px rgba(0, 143, 140, 0.3)'
+        textAlign: 'center',
+        boxShadow: '0 5px 20px rgba(0,0,0,0.2)'
       }}>
-        <h2 style={{ textAlign: 'center', marginBottom: '1rem', color: '#0FC2C0' }}>Create an Account</h2>
+        {/* Logo Placeholder */}
+        <div style={{
+          marginBottom: '1.5rem'
+        }}>
+          <div style={{
+            width: '40px',
+            height: '40px',
+            backgroundColor: '#0FC2C0',
+            borderRadius: '50%',
+            margin: '0 auto'
+          }} />
+        </div>
 
-        <input type="text" placeholder="Full Name" style={inputStyle} />
-        <input type="email" placeholder="Email Address" style={inputStyle} />
-        <input type="password" placeholder="Password" style={inputStyle} />
+        <h2 style={{ color: '#333', marginBottom: '1.5rem' }}>Create your workspace</h2>
 
-        <button type="submit" style={buttonStyle}>Sign Up</button>
+        <button style={primaryButton}>Continue with Google</button>
+        <button style={secondaryButton}>Continue with email</button>
+        <button style={secondaryButton}>Create with email</button>
 
-        <p style={{ textAlign: 'center', fontSize: '0.85rem', color: '#CFEAE8' }}>
+        <p style={{ fontSize: '0.75rem', color: '#666', marginTop: '1.5rem' }}>
+          By signing up, you agree to our <a href="#" style={{ color: '#0FC2C0' }}>Terms of Service</a> and <a href="#" style={{ color: '#0FC2C0' }}>Data Processing Agreement</a>.
+        </p>
+
+        <p style={{ fontSize: '0.85rem', marginTop: '1rem', color: '#444' }}>
           Already have an account? <a href="/login" style={{ color: '#0CABA8' }}>Log in</a>
         </p>
-      </form>
+      </div>
     </div>
   );
 }
 
-const inputStyle = {
+const primaryButton = {
+  width: '100%',
   padding: '0.75rem',
-  borderRadius: '8px',
-  border: '1px solid #008F8C',
-  backgroundColor: '#121212',
+  marginBottom: '0.75rem',
+  backgroundColor: '#6C63FF',
   color: '#fff',
+  fontWeight: 'bold',
+  border: 'none',
+  borderRadius: '8px',
+  cursor: 'pointer',
   fontSize: '0.9rem'
 };
 
-const buttonStyle = {
-  backgroundColor: '#0FC2C0',
-  color: '#023535',
+const secondaryButton = {
+  width: '100%',
   padding: '0.75rem',
+  marginBottom: '0.75rem',
+  backgroundColor: '#fff',
+  color: '#333',
+  border: '1px solid #ddd',
   borderRadius: '8px',
-  border: 'none',
-  fontWeight: 'bold',
   cursor: 'pointer',
-  transition: '0.3s'
+  fontSize: '0.9rem'
 };
