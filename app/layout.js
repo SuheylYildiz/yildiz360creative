@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
             padding: 6rem 2rem;
             max-width: 1000px;
             margin: auto;
-            text-align: left;
+            text-align: center;
           }
           .hero h1 {
             font-size: 3rem;
@@ -71,9 +71,8 @@ export default function RootLayout({ children }) {
           </nav>
         </header>
         <section className="hero">
-          <h1>Yildiz360Creative Is A Purpose-Built Platform For Creative Teams</h1>
-          <p>Meet the modern system for streamlined film production management and coordination. Collaborate seamlessly in one powerful workspace.</p>
-          <button>Start Building</button>
+          <h1>Yildiz360Creative</h1>
+          <p>Your Creative Workflow, All in One Place</p>
         </section>
         {children}
       </body>
