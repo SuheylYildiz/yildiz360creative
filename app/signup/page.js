@@ -1,3 +1,5 @@
+"use client";
+
 export default function SignUpLanding() {
   return (
     <div style={{
@@ -18,7 +20,6 @@ export default function SignUpLanding() {
         textAlign: 'center',
         boxShadow: '0 5px 25px rgba(0,0,0,0.1)'
       }}>
-        {/* الشعار */}
         <div style={{
           width: '40px',
           height: '40px',
@@ -29,12 +30,10 @@ export default function SignUpLanding() {
 
         <h2 style={{ color: '#000', marginBottom: '1.5rem' }}>Create your workspace</h2>
 
-        {/* الأزرار */}
-        <button style={{ ...buttonStyle, backgroundColor: '#fff', color: '#000' }} onMouseOver={(e) => hoverEffect(e)} onMouseOut={(e) => resetEffect(e)}>Continue with Google</button>
-        <button style={{ ...buttonStyle, backgroundColor: '#fff', color: '#000' }} onMouseOver={(e) => hoverEffect(e)} onMouseOut={(e) => resetEffect(e)}>Continue with email</button>
-        <button style={{ ...buttonStyle, backgroundColor: '#fff', color: '#000' }} onMouseOver={(e) => hoverEffect(e)} onMouseOut={(e) => resetEffect(e)}>Create with email</button>
+        <HoverButton text="Continue with Google" />
+        <HoverButton text="Continue with email" />
+        <HoverButton text="Create with email" />
 
-        {/* النص القانوني */}
         <p style={{ fontSize: '0.75rem', color: '#666', marginTop: '1.5rem' }}>
           By signing up, you agree to our{" "}
           <a href="#" style={linkStyle}>Terms of Service</a> and{" "}
@@ -49,35 +48,39 @@ export default function SignUpLanding() {
   );
 }
 
-// الزر العادي
-const buttonStyle = {
-  width: '100%',
-  padding: '0.75rem',
-  marginBottom: '0.75rem',
-  border: '1px solid #ddd',
-  borderRadius: '8px',
-  fontSize: '0.9rem',
-  fontWeight: '500',
-  cursor: 'pointer',
-  transition: '0.3s',
-  outline: 'none'
-};
+function HoverButton({ text }) {
+  return (
+    <button
+      onMouseEnter={(e) => {
+        e.target.style.backgroundColor = '#015958';
+        e.target.style.color = '#fff';
+      }}
+      onMouseLeave={(e) => {
+        e.target.style.backgroundColor = '#fff';
+        e.target.style.color = '#000';
+      }}
+      style={{
+        width: '100%',
+        padding: '0.75rem',
+        marginBottom: '0.75rem',
+        border: '1px solid #ddd',
+        borderRadius: '8px',
+        fontSize: '0.9rem',
+        fontWeight: '500',
+        backgroundColor: '#fff',
+        color: '#000',
+        cursor: 'pointer',
+        transition: '0.3s',
+        outline: 'none'
+      }}
+    >
+      {text}
+    </button>
+  );
+}
 
-// الرابط بدون تأثير التركيز
 const linkStyle = {
   color: '#0CABA8',
   textDecoration: 'none',
   outline: 'none'
 };
-
-// عند الهوفر
-function hoverEffect(e) {
-  e.target.style.backgroundColor = '#015958';
-  e.target.style.color = '#fff';
-}
-
-// عند الإزالة
-function resetEffect(e) {
-  e.target.style.backgroundColor = '#fff';
-  e.target.style.color = '#000';
-}
