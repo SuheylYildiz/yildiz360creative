@@ -76,7 +76,7 @@ function HoverButton({ text }) {
 }
 
 const linkStyle = {
-  color: '#0CABA8',
+  color: '#fcfcfc',
   textDecoration: 'none',
   outline: 'none',
   boxShadow: 'none',
