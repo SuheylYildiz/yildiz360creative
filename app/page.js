@@ -1,3 +1,7 @@
 export default function Home() {
-  return null; // Everything is handled inside layout.js for now
+  return (
+    <main>
+      <h2>Welcome to Yildiz360Creative</h2>
+    </main>
+  );
 }
