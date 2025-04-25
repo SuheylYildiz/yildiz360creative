@@ -29,12 +29,12 @@ export default function SignUpLanding() {
         }} />
 
         <h2 style={{ color: '#000', marginBottom: '1.5rem' }}>
-          Create your workspace
+          Create Your Workspace
         </h2>
 
         <HoverButton text="Continue with Google" />
-        <HoverButton text="Continue with email" />
-        <HoverButton text="Create with email" />
+        <HoverButton text="Continue with Email" />
+        <HoverButton text="Create with Email" />
 
         <p style={{ fontSize: '0.75rem', color: '#666', marginTop: '1.5rem' }}>
           By signing up, you agree to our{" "}
