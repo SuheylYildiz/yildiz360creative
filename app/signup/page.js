@@ -36,7 +36,27 @@ export default function SignUpLanding() {
         <HoverButton text="Continue With Email" />
 
         <p style={{ fontSize: '0.85rem', marginTop: '1rem', color: '#444' }}>
-          Already have an account? <a href="/login" style={{ ...linkStyle, fontWeight: 'bold' }}>Log in</a>
+          Already have an account?{' '}
+          <a
+            href="/login"
+            style={{
+              ...linkStyle,
+              fontWeight: 'bold',
+              padding: '0.4rem 0.75rem',
+              borderRadius: '6px',
+              transition: '0.3s'
+            }}
+            onMouseEnter={(e) => {
+              e.target.style.backgroundColor = '#015958';
+              e.target.style.color = '#fff';
+            }}
+            onMouseLeave={(e) => {
+              e.target.style.backgroundColor = 'transparent';
+              e.target.style.color = '#0CABA8';
+            }}
+          >
+            Log in
+          </a>
         </p>
       </div>
     </div>
@@ -76,7 +96,7 @@ function HoverButton({ text }) {
 }
 
 const linkStyle = {
-  color: '#023535',
+  color: '#0CABA8',
   textDecoration: 'none',
   outline: 'none',
   boxShadow: 'none',
