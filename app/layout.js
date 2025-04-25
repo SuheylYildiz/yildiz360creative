@@ -1,5 +1,3 @@
-'use client';
-
 export const metadata = {
   title: 'Yildiz360Creative',
   description: 'Empowering filmmakers with a sleek all-in-one creative workspace',
