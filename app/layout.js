@@ -15,56 +15,79 @@ export default function RootLayout({ children }) {
             background-color: #0D0D0D;
             color: white;
           }
+
           header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.25rem 2rem;
+            padding: 1rem 2rem;
             background-color: #0D0D0D;
             border-bottom: 1px solid #222;
           }
+
           .logo {
-            display: flex;
-            align-items: center;
             font-weight: bold;
-            font-size: 1.25rem;
+            font-size: 1.1rem;
             color: white;
           }
+
           nav {
             display: flex;
             align-items: center;
+            gap: 1.2rem;
           }
+
           nav a {
-            color: #CFEAE8;
-            margin-left: 1.5rem;
-            text-decoration: none;
+            font-size: 0.9rem;
             font-weight: 500;
+            color: #CFEAE8;
+            text-decoration: none;
+            padding: 0.4rem 0.75rem;
+            border-radius: 6px;
+            transition: background-color 0.2s ease, color 0.2s ease;
           }
+
+          nav a:hover {
+            background-color: #015958;
+            color: #fff;
+          }
+
           nav a.signup {
             background-color: white;
             color: #0D0D0D;
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
+            padding: 0.4rem 0.9rem;
+            font-size: 0.9rem;
             font-weight: 600;
+            border-radius: 6px;
+            transition: background-color 0.2s ease, color 0.2s ease;
           }
+
+          nav a.signup:hover {
+            background-color: #015958;
+            color: #fff;
+          }
+
           .hero {
             padding: 6rem 2rem;
             max-width: 1000px;
             margin: auto;
             text-align: center;
           }
+
           .hero h1 {
             font-size: 3rem;
             line-height: 1.2;
             margin-bottom: 1.5rem;
             color: #ffffff;
           }
+
           .hero p {
             font-size: 1.25rem;
             line-height: 1.6;
             color: #CFEAE8;
             margin-bottom: 2rem;
           }
+
           .hero button {
             background-color: #0FC2C0;
             color: #023535;
