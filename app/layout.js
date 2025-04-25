@@ -23,21 +23,33 @@ export default function RootLayout({ children }) {
             padding: 1rem 2rem;
             background-color: #0D0D0D;
             border-bottom: 1px solid #222;
+            position: relative;
           }
 
           .logo {
             font-weight: bold;
             font-size: 1.1rem;
             color: white;
+            flex: 1;
           }
 
-          nav {
+          .center-nav {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
             display: flex;
-            align-items: center;
             gap: 1.2rem;
           }
 
-          nav a {
+          .right-nav {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex: 1;
+            justify-content: flex-end;
+          }
+
+          a {
             font-size: 0.9rem;
             font-weight: 500;
             color: #CFEAE8;
@@ -47,22 +59,18 @@ export default function RootLayout({ children }) {
             transition: background-color 0.2s ease, color 0.2s ease;
           }
 
-          nav a:hover {
+          a:hover {
             background-color: #015958;
             color: #fff;
           }
 
-          nav a.signup {
+          a.signup {
             background-color: white;
             color: #0D0D0D;
-            padding: 0.4rem 0.9rem;
-            font-size: 0.9rem;
             font-weight: 600;
-            border-radius: 6px;
-            transition: background-color 0.2s ease, color 0.2s ease;
           }
 
-          nav a.signup:hover {
+          a.signup:hover {
             background-color: #015958;
             color: #fff;
           }
@@ -103,16 +111,18 @@ export default function RootLayout({ children }) {
       <body>
         <header>
           <div className="logo">Yildiz360Creative</div>
-          <nav>
+          <nav className="center-nav">
             <a href="#">Product</a>
             <a href="#">Resources</a>
             <a href="#">Pricing</a>
             <a href="#">Customers</a>
             <a href="#">Blog</a>
             <a href="#">Contact</a>
+          </nav>
+          <div className="right-nav">
             <a href="#">Log in</a>
             <a href="#" className="signup">Sign up</a>
-          </nav>
+          </div>
         </header>
         <section className="hero">
           <h1>Yildiz360Creative</h1>
